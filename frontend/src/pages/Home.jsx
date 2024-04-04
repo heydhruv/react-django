@@ -36,7 +36,6 @@ export default function Home() {
 
     const createNote = (e) => {
         e.preventDefault();
-        console.log("111111111111")
         api.post("/api/notes/", {content, title})
         .then((res) => {
             if  (res.status !== 201) {
